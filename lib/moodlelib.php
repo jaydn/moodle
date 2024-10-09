@@ -4037,7 +4037,7 @@ function authenticate_user_login(
     }
 
     // Failed if all the plugins have failed.
-    if (debugging('', DEBUG_ALL)) {
+    if ($CFG->debugfailedlogin || debugging('', DEBUG_ALL)) {
         error_log('[client '.getremoteaddr()."]  $CFG->wwwroot  Failed Login:  $username  ".$_SERVER['HTTP_USER_AGENT']);
     }
 
