@@ -62,7 +62,12 @@ if ($hassiteconfig) { // speedup for non-admins, add all caps used on this page
     $temp->add(new admin_setting_configcheckbox('debugvalidators', new lang_string('debugvalidators', 'admin'), new lang_string('configdebugvalidators', 'admin'), 0));
     $temp->add(new admin_setting_configcheckbox('debugpageinfo', new lang_string('debugpageinfo', 'admin'), new lang_string('configdebugpageinfo', 'admin'), 0));
     $temp->add(new admin_setting_configcheckbox('debugtemplateinfo', new lang_string('debugtemplateinfo', 'admin'), new lang_string('debugtemplateinfo_desc', 'admin'), 0));
-    $temp->add(new admin_setting_configcheckbox('debugfailedlogin', new lang_string('debugfailedlogin', 'admin'), new lang_string('configdebugfailedlogin', 'admin'), 0));
+    $temp->add(new admin_setting_configcheckbox('debugfailedlogin',
+      new lang_string('debugfailedlogin', 'admin'),
+      new lang_string('configdebugfailedlogin', 'admin'),
+      0
+    ));
+
     $ADMIN->add('development', $temp);
 
     // "Profiling" settingpage (conditionally if the 'xhprof' extension is available only).

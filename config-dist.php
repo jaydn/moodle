@@ -828,6 +828,10 @@ $CFG->admin = 'admin';
 // for these users only.
 // $CFG->debugusers = '2';
 //
+// If enabled this option will, regardless of debug level set, always log failed user logins into PHP error log.
+// This setting can be useful when analyzing failed logins externally.
+// $CFG->debugfailedlogin = false;
+//
 // Prevent theme caching
 // $CFG->themedesignermode = true; // NOT FOR PRODUCTION SERVERS!
 //
